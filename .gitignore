@@ -1,0 +1,8 @@
+backend/target/
+backend/.idea/
+ui/node_modules/
+ui/src/.umi/
+ui/pnpm-lock.yaml
+ui2/node_modules/
+ui2/src/.umi/
+ui2/pnpm-lock.yaml

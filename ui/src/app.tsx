@@ -57,6 +57,10 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
         return <AvatarDropdown>{avatarChildren}</AvatarDropdown>;
       },
     },
+    // title: 'asd',
+    breadcrumbRender() {
+      return [];
+    },
     waterMarkProps: {
       // content: initialState?.currentUser?.name,
       // enable: false,

@@ -4,7 +4,7 @@
 
 ```bash
 
-npm install 
+npm install  --legacy-peer-deps   忽略包冲突
 npm run dev
 
 ```

@@ -75,7 +75,7 @@ const TableList: React.FC = () => {
         await updateRule(values);
         hide();
         message.success('修改成功');
-        setVisible(false);
+        handleDone();
         if (actionRef.current) {
           actionRef.current.reload();
         }
@@ -263,34 +263,33 @@ const TableList: React.FC = () => {
     },
   ];
 
-  const filterColumns: ProColumns<TableListItem>[] = [
-    {
-      title: 'id',
-      dataIndex: 'id',
-      // tip: 'id是唯一的 key',
-      // render: (dom, entity) => {
-      //   return (
-      //     <a
-      //       onClick={() => {
-      //         setCurrentRow(entity);
-      //         setShowDetail(true);
-      //       }}
-      //     >
-      //       {dom}
-      //     </a>
-      //   );
-      // },
-    },
-  ];
-
   return (
-    <PageContainer>
+    <PageContainer
+      title={
+        <div style={{ display: 'flex' }}>
+          <div
+            style={{
+              width: '3px',
+              height: '26px',
+              marginTop: '4px',
+              background: '#348cd3',
+              marginRight: '5px',
+              borderRadius: '5px',
+            }}
+          ></div>
+          用户
+        </div>
+      }
+    >
       <ProTable<TableListItem, TableListPagination>
         headerTitle="查询表格"
         actionRef={actionRef}
         rowKey="key"
         search={{
-          labelWidth: 120,
+          labelWidth: 25,
+          // formItemProps: {
+          //   labelAlign: 'left', // 设置左对齐
+          // },
         }}
         pagination={false}
         toolBarRender={() => [
